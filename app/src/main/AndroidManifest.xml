@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".designpattern.observerpattern.ObserverPatternActivity"></activity>
+        <activity android:name=".designpattern.observerpattern.ObserverPatternActivity" />
+        <activity android:name=".designpattern.factorypattern.FactoryPatternActivity" />
+        <activity android:name=".designpattern.abstractfactorypattern.AbstractFactoryPatternActivity" />
+        <activity android:name=".designpattern.BuilderPattern.BuilderPatternActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.qidongyinqing.www.designpattern.adapter.QuestionRVAdapter;
+import com.qidongyinqing.www.designpattern.designpattern.BuilderPattern.BuilderPatternActivity;
+import com.qidongyinqing.www.designpattern.designpattern.abstractfactorypattern.AbstractFactoryPatternActivity;
+import com.qidongyinqing.www.designpattern.designpattern.factorypattern.FactoryPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.observerpattern.ObserverPatternActivity;
 import com.qidongyinqing.www.designpattern.utils.StartActivityManger;
 
@@ -32,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
             public void click(String  name) {
                 if(name.contains("观察者模式")){
                     StartActivityManger.startActivity(mContext,ObserverPatternActivity.class);
+                }else  if(name.contains("工厂方法模式")){
+                    StartActivityManger.startActivity(mContext,FactoryPatternActivity.class);
+                }else  if(name.contains("抽象工厂模式")){
+                    StartActivityManger.startActivity(mContext,AbstractFactoryPatternActivity.class);
+                }else  if(name.contains("建造者模式")){
+                    StartActivityManger.startActivity(mContext,BuilderPatternActivity.class);
                 }
 
             }
