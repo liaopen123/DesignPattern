@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.qidongyinqing.www.designpattern.adapter.QuestionRVAdapter;
 import com.qidongyinqing.www.designpattern.designpattern.BuilderPattern.BuilderPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.abstractfactorypattern.AbstractFactoryPatternActivity;
+import com.qidongyinqing.www.designpattern.designpattern.decorationpattern.DecorationPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.factorypattern.FactoryPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.observerpattern.ObserverPatternActivity;
 import com.qidongyinqing.www.designpattern.utils.StartActivityManger;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     StartActivityManger.startActivity(mContext,AbstractFactoryPatternActivity.class);
                 }else  if(name.contains("建造者模式")){
                     StartActivityManger.startActivity(mContext,BuilderPatternActivity.class);
+                }else  if(name.contains("装饰器")){
+                    StartActivityManger.startActivity(mContext,DecorationPatternActivity.class);
                 }
 
             }

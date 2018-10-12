@@ -19,7 +19,8 @@
         <activity android:name=".designpattern.observerpattern.ObserverPatternActivity" />
         <activity android:name=".designpattern.factorypattern.FactoryPatternActivity" />
         <activity android:name=".designpattern.abstractfactorypattern.AbstractFactoryPatternActivity" />
-        <activity android:name=".designpattern.BuilderPattern.BuilderPatternActivity"></activity>
+        <activity android:name=".designpattern.BuilderPattern.BuilderPatternActivity" />
+        <activity android:name=".designpattern.decorationpattern.DecorationPatternActivity"></activity>
     </application>
 
 </manifest>
