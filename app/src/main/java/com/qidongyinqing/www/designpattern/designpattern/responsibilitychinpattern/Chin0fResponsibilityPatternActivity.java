@@ -17,18 +17,17 @@ public class Chin0fResponsibilityPatternActivity extends AppCompatActivity {
         loogerChin.loggerMessage(AbstractLooger.INFOLEVEL,"我选的是info");
         loogerChin.loggerMessage(AbstractLooger.DEBUGLEVEL,"我选的是debug");
         loogerChin.loggerMessage(AbstractLooger.ERRORLEVEL,"我选的是error");
-
     }
 
 
     public AbstractLooger getLoogerChin(){
 
-        ERRORLooger errorLooger = new ERRORLooger();
-        INFOLooger infoLooger = new INFOLooger();
-        DEBUGLooger debugLooger = new DEBUGLooger();
+        DEBUGLooger debugLooger = new DEBUGLooger(AbstractLooger.DEBUGLEVEL);
+        ERRORLooger errorLooger = new ERRORLooger(AbstractLooger.ERRORLEVEL);
+        INFOLooger infoLooger = new INFOLooger(AbstractLooger.INFOLEVEL);
+       errorLooger.setNextLooger(debugLooger);
+       debugLooger.setNextLooger(infoLooger);
 
-        errorLooger.setNextLooger(infoLooger);
-        infoLooger.setNextLooger(debugLooger);
 
         return errorLooger;
     }
