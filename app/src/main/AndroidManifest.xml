@@ -21,7 +21,8 @@
         <activity android:name=".designpattern.abstractfactorypattern.AbstractFactoryPatternActivity" />
         <activity android:name=".designpattern.BuilderPattern.BuilderPatternActivity" />
         <activity android:name=".designpattern.decorationpattern.DecorationPatternActivity" />
-        <activity android:name=".designpattern.responsibilitychinpattern.Chin0fResponsibilityPatternActivity"></activity>
+        <activity android:name=".designpattern.responsibilitychinpattern.Chin0fResponsibilityPatternActivity" />
+        <activity android:name=".designpattern.proxypattern.ProxyPatternActivity"></activity>
     </application>
 
 </manifest>

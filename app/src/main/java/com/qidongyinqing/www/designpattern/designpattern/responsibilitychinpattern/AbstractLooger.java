@@ -7,7 +7,7 @@ public abstract class AbstractLooger {
     public static int INFOLEVEL = 1;
     public static int DEBUGLEVEL = 2;
     public static int ERRORLEVEL = 3;
-    protected  int level;
+    protected int level;
     private String TAG = "AbstractLooger";
 
     public  void setNextLooger(AbstractLooger abstractLooger){

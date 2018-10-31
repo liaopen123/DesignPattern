@@ -12,6 +12,7 @@ import com.qidongyinqing.www.designpattern.designpattern.abstractfactorypattern.
 import com.qidongyinqing.www.designpattern.designpattern.decorationpattern.DecorationPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.factorypattern.FactoryPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.observerpattern.ObserverPatternActivity;
+import com.qidongyinqing.www.designpattern.designpattern.proxypattern.ProxyPatternActivity;
 import com.qidongyinqing.www.designpattern.designpattern.responsibilitychinpattern.Chin0fResponsibilityPatternActivity;
 import com.qidongyinqing.www.designpattern.utils.StartActivityManger;
 
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     StartActivityManger.startActivity(mContext,DecorationPatternActivity.class);
                 }else  if(name.contains("责任链模式")){
                     StartActivityManger.startActivity(mContext,Chin0fResponsibilityPatternActivity.class);
+                }else  if(name.contains("代理模式")){
+                    StartActivityManger.startActivity(mContext,ProxyPatternActivity.class);
                 }
 
             }
