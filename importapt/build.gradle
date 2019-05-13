@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/javawriter-2.5.1.jar')
+    compile project(path: ':annotationinterface')
+    compile 'com.squareup:javapoet:1.11.1'
+    compile 'com.google.auto.service:auto-service:1.0-rc3'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

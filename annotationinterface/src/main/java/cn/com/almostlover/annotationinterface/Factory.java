@@ -1,4 +1,4 @@
-package com.qidongyinqing.www.designpattern.designpattern.factorypatterninapt;
+package cn.com.almostlover.annotationinterface;
 
 
 import java.lang.annotation.ElementType;

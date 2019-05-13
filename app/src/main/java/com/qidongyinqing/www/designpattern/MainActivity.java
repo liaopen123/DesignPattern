@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         QuestionRVAdapter mGalleryAdapeter = new QuestionRVAdapter(this);
         recyclerView.setAdapter(mGalleryAdapeter);
         mGalleryAdapeter.setData(designPattern);
-
         mGalleryAdapeter.setOnItemClickListener(new QuestionRVAdapter.OnItemClickListener() {
             @Override
             public void click(String  name) {
