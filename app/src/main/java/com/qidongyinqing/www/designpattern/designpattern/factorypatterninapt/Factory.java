@@ -1,0 +1,20 @@
+package com.qidongyinqing.www.designpattern.designpattern.factorypatterninapt;
+
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.CLASS)
+public @interface Factory {
+
+    /**
+     * name of factory
+     * @return
+     */
+    Class<?> type();
+
+    String id();
+}
