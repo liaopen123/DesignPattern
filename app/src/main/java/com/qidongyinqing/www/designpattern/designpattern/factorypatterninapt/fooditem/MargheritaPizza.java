@@ -3,9 +3,8 @@ package com.qidongyinqing.www.designpattern.designpattern.factorypatterninapt.fo
 
 import com.qidongyinqing.www.designpattern.designpattern.factorypatterninapt.fooditem.base.Meal;
 
-import cn.com.almostlover.annotationinterface.Factory;
 
-@Factory(type = MargheritaPizza.class,id = "MargheritaPizza")
+//@Factory(type = MargheritaPizza.class,id = "MargheritaPizza")
 public class MargheritaPizza implements Meal {
     @Override
     public float getPrice() {

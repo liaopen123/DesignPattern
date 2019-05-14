@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.qidongyinqing.www.designpattern.adapter.QuestionRVAdapter;
 import com.qidongyinqing.www.designpattern.designpattern.BuilderPattern.BuilderPatternActivity;
@@ -16,16 +17,20 @@ import com.qidongyinqing.www.designpattern.designpattern.proxypattern.ProxyPatte
 import com.qidongyinqing.www.designpattern.designpattern.responsibilitychinpattern.Chin0fResponsibilityPatternActivity;
 import com.qidongyinqing.www.designpattern.utils.StartActivityManger;
 
+import cn.com.almostlover.apt_annotation.BindView;
+import cn.com.almostlover.apt_library.BindViewTools;
+
 public class MainActivity extends AppCompatActivity {
     String[] designPattern = {"工厂方法模式","抽象工厂模式","单例模式","建造者模式","原型模式","适配器模式","装饰器模式","代理模式","外观模式","桥接模式","组合模式","享元模式","策略模式","模板方法模式","观察者模式","迭代子模式","责任链模式","命令模式","备忘录模式","状态模式","访问者模式","中介者模式","解释器模式","并发型模式","线程池模式"};
     private Context mContext;
-
+    @BindView(R.id.rv)
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext =  this;
         setContentView(R.layout.activity_main);
-        RecyclerView recyclerView = findViewById(R.id.rv);
+        BindViewTools.bind(this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
