@@ -1,19 +1,20 @@
-package cn.com.almostlover.multithread.future;
+package cn.com.almostlover.multithread.future.diy;
 
 class RealData {
     protected String result;
 
     public RealData(String queryStr) {
-
+        //这里是真正的获取数据的地方 时间比较长
         StringBuffer stringBuffer = new StringBuffer();
         for (int i = 0; i < 10; i++) {
 
             stringBuffer.append(queryStr);
-
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            synchronized (Thread.currentThread()) {
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
