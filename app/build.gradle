@@ -29,4 +29,5 @@ dependencies {
     implementation project(path: ':apt_annotation')
     implementation project(':apt_library')
     annotationProcessor project(':apt_processor')
+    implementation project(path: ':multi_thread')
 }

@@ -1,1 +1,1 @@
-include ':app', ':apt_annotation', ':apt_processor', ':apt_library'
+include ':app', ':apt_annotation', ':apt_processor', ':apt_library', ':multi_thread'

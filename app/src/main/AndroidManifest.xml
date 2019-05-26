@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MultiThreadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
         <activity android:name=".designpattern.observerpattern.ObserverPatternActivity" />
         <activity android:name=".designpattern.factorypattern.FactoryPatternActivity" />
@@ -22,7 +25,7 @@
         <activity android:name=".designpattern.BuilderPattern.BuilderPatternActivity" />
         <activity android:name=".designpattern.decorationpattern.DecorationPatternActivity" />
         <activity android:name=".designpattern.responsibilitychinpattern.Chin0fResponsibilityPatternActivity" />
-        <activity android:name=".designpattern.proxypattern.ProxyPatternActivity"></activity>
+        <activity android:name=".designpattern.proxypattern.ProxyPatternActivity" />
     </application>
 
 </manifest>

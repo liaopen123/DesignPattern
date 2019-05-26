@@ -29,7 +29,7 @@ import cn.com.almostlover.apt_annotation.BindView;
 /**
  *
  */
-@AutoService(Processor.class)
+//@AutoService(Processor.class)
 public class BindViewProcessor extends AbstractProcessor {
 
 

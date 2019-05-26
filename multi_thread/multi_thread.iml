@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":apt_processor" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":multi_thread" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":apt_processor" />
+        <option name="GRADLE_PROJECT_PATH" value=":multi_thread" />
       </configuration>
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
@@ -27,11 +27,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="apt_annotation" exported="" />
-    <orderEntry type="library" exported="" name="Gradle: auto-service-1.0-rc2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: javapoet-1.10.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: auto-common-0.3" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: guava-18.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: javawriter-2.5.1" level="project" />
   </component>
 </module>
