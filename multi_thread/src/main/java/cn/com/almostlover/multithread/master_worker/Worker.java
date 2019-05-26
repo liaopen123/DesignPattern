@@ -17,11 +17,13 @@ class Worker implements Runnable {
         this.resultMap = resultMap;
     }
 
+
+    //从工作队列中取出 并计算  并把结果放入到结果队列
     @Override
     public void run() {
 
         while (true) {
-            Object input = workQueue.poll();
+            Object input = workQueue.poll();//从队列中取出并删除第一个元素
             if (input == null) break;
             Object result = handle(input);
 

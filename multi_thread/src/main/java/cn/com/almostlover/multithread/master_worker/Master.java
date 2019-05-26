@@ -8,25 +8,26 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Master {
     //任务队列
-    protected Queue<Object> workQueue = new ConcurrentLinkedDeque<Object>();
+    protected Queue<Object> taskQueue = new ConcurrentLinkedDeque<Object>();
     //worker队列
-    protected Map<String, Thread> threadMap = new HashMap<String, Thread>();
+    protected Map<String, Thread> wokerMap = new HashMap<String, Thread>();
     //任务队列
     protected Map<String, Object> resultMap = new ConcurrentHashMap<String, Object>();
 
 
     public Master(Worker worker, int countWorker) {
-        worker.setWorkQueue(workQueue);
+        worker.setWorkQueue(taskQueue);
         worker.setResultMap(resultMap);
 
         for (int i = 0; i < countWorker; i++) {
-            threadMap.put(Integer.toString(i), new Thread(worker, Integer.toString(i)));
+            //一共5个thread
+            wokerMap.put(Integer.toString(i), new Thread(worker, Integer.toString(i)));
         }
     }
 
-
+    // call 100 times
     public void submit(Object job) {
-        workQueue.add(job);
+        taskQueue.add(job);
     }
 
 
@@ -35,13 +36,13 @@ public class Master {
     }
 
     public void execute() {
-        for (Map.Entry<String, Thread> entry : threadMap.entrySet()) {
+        for (Map.Entry<String, Thread> entry : wokerMap.entrySet()) {
             entry.getValue().start();
         }
     }
 
     public boolean isCompete() {
-        for (Map.Entry<String, Thread> entry : threadMap.entrySet()) {
+        for (Map.Entry<String, Thread> entry : wokerMap.entrySet()) {
             if (entry.getValue().getState() != Thread.State.TERMINATED) {
                 return false;
             }
