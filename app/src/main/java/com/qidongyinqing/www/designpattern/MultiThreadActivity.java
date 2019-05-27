@@ -3,6 +3,7 @@ package com.qidongyinqing.www.designpattern;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import cn.com.almostlover.multithread.consumer_producer.MainConsumerProducer;
 import cn.com.almostlover.multithread.future.MainFuture;
 import cn.com.almostlover.multithread.guardde_suspension.MainGuardedSuspension;
 import cn.com.almostlover.multithread.master_worker.MainMasterWorker;
@@ -22,7 +23,9 @@ public class MultiThreadActivity extends AppCompatActivity {
 //                mainFuture.doWithJdk();
 
 //        new MainMasterWorker().doIt();
-        new MainGuardedSuspension().doIt();
+//        new MainGuardedSuspension().doIt();
+        new MainConsumerProducer().doIt();
+
     }
 
 }
