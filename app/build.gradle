@@ -31,3 +31,52 @@ dependencies {
     annotationProcessor project(':apt_processor')
     implementation project(path: ':multi_thread')
 }
+
+
+gradle.addBuildListener(new BuildListener() {
+    @Override
+    void buildStarted(Gradle gradle) {
+        println("开始构建.....")
+    }
+
+    @Override
+    void settingsEvaluated(Settings settings) {
+        println("setting文件解析完成.....")
+    }
+
+    @Override
+    void projectsLoaded(Gradle gradle) {
+        println("项目加载完成.....")
+
+        gradle.rootProject.subprojects.each {
+            pro ->
+                pro.beforeEvaluate {
+                    println("${pro.name} 项目配置之前调用")
+                }
+                pro.afterEvaluate {
+                    println("${pro.name} 项目配置之后调用")
+                }
+
+        }
+    }
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+        println("项目解析完成.....")
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+        println("构建完成.....")
+    }
+})
+
+gradle.taskGraph.whenReady {
+    println("task 图构建完成")
+}
+gradle.taskGraph.beforeTask {
+    println("每个 task 执行前会调这个接口")
+}
+gradle.taskGraph.afterTask {
+    println("每个 task 执行完成会调这个接口")
+}
