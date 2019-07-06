@@ -3,10 +3,18 @@ package com.qidongyinqing.www.designpattern;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import cn.com.almostlover.multithread.consumer_producer.MainConsumerProducer;
-import cn.com.almostlover.multithread.future.MainFuture;
-import cn.com.almostlover.multithread.guardde_suspension.MainGuardedSuspension;
-import cn.com.almostlover.multithread.master_worker.MainMasterWorker;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import cn.com.almostlover.multithread.multi_thread_mode1.consumer_producer.MainConsumerProducer;
+import cn.com.almostlover.multithread.threadpool.MyThread;
+import cn.com.almostlover.multithread.threadpool.PThread;
+import cn.com.almostlover.multithread.threadpool.ThreadPool;
+import cn.com.almostlover.multithread.threadpool.thread_pool_in_java.JThreadPool;
 
 /**
  * java 多线程 执行Activity
@@ -24,7 +32,13 @@ public class MultiThreadActivity extends AppCompatActivity {
 
 //        new MainMasterWorker().doIt();
 //        new MainGuardedSuspension().doIt();
-        new MainConsumerProducer().doIt();
+//        new MainConsumerProducer().doIt();
+        ExecutorService exe = Executors.newCachedThreadPool();
+        for (int i = 0; i < 1000; i++) {
+            JThreadPool.getInstance().start(new MyThread("testThreadPool"+ i));
+//        exe.execute(new MyThread("testJDKThreadPool"+i));
+        }
+
 
     }
 

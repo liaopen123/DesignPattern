@@ -1,5 +1,6 @@
 package com.qidongyinqing.www.designpattern.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -40,7 +41,7 @@ public class QuestionRVAdapter extends RVBaseAdapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
                 EventPlanningOneHolder oneHolder = ( EventPlanningOneHolder) holder;
                 oneHolder.tv_question.setText(dataList[position]);
 
