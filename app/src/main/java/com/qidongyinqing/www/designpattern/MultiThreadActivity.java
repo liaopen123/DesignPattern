@@ -3,9 +3,13 @@ package com.qidongyinqing.www.designpattern;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.qidongyinqing.www.designpattern.designpattern.factoryandconsumer.FactoryConsumerTest;
+import com.qidongyinqing.www.designpattern.interview.sort.Sort;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,6 +29,7 @@ public class MultiThreadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_thread);
+        Sort.insertionSorting();
 //
 //                MainFuture mainFuture = new MainFuture();
 ////                mainFuture.doIt();
@@ -33,13 +38,15 @@ public class MultiThreadActivity extends AppCompatActivity {
 //        new MainMasterWorker().doIt();
 //        new MainGuardedSuspension().doIt();
 //        new MainConsumerProducer().doIt();
-        ExecutorService exe = Executors.newCachedThreadPool();
-        for (int i = 0; i < 1000; i++) {
-            JThreadPool.getInstance().start(new MyThread("testThreadPool"+ i));
-//        exe.execute(new MyThread("testJDKThreadPool"+i));
-        }
+//        ExecutorService exe = Executors.newCachedThreadPool();
+//        for (int i = 0; i < 1000; i++) {
+//            JThreadPool.getInstance().start(new MyThread("testThreadPool"+ i));
+////        exe.execute(new MyThread("testJDKThreadPool"+i));
+//        }
 
-
+//        FactoryConsumerTest.test();
+//        ThreadLoclTest.test();
     }
+
 
 }

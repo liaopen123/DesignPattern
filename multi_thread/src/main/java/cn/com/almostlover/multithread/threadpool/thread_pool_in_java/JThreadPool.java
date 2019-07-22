@@ -3,7 +3,6 @@ package cn.com.almostlover.multithread.threadpool.thread_pool_in_java;
 import java.util.List;
 import java.util.Vector;
 
-import cn.com.almostlover.multithread.threadpool.PThread;
 
 public class JThreadPool {
 

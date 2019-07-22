@@ -1,1 +1,10 @@
-include ':app', ':apt_annotation', ':apt_processor', ':apt_library', ':multi_thread'
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin2js") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+include ':app', ':apt_annotation', ':apt_processor', ':apt_library', ':multi_thread', ':interview'

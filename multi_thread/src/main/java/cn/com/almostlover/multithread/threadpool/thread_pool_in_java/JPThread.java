@@ -1,6 +1,5 @@
 package cn.com.almostlover.multithread.threadpool.thread_pool_in_java;
 
-import java.util.logging.Logger;
 
 public class JPThread extends Thread {
 
